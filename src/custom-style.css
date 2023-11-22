@@ -1,0 +1,17 @@
+.vertical-flex {
+	display: flex;
+	flex-direction: column;
+}
+
+.book {
+	border-radius: 8px;
+	background-color: black;
+	margin: 18px;
+}
+.book > button {
+	border-radius: 0px;
+}
+
+.small-text {
+	font-size: 0.75rem;
+}

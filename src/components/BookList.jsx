@@ -5,7 +5,7 @@ const API_URL = `https://fsa-book-buddy-b6e748d1380d.herokuapp.com`;
 const GET_URL = `/api/books`;
 
 
-const BookList = () => {
+const BookList = ({setSelectedBook}) => {
 
 	const [books, setBooks] = useState(null);
 
@@ -32,7 +32,10 @@ const BookList = () => {
 		{
 			books ? (				
 				books.map((book) => {
-					return <Book book={book}></Book>;
+					return <Book 
+					book={book} setSelectedBook={setSelectedBook}
+					key={book.title}
+					></Book>;
 				})
 			) : (
 				<></>

@@ -2,6 +2,7 @@ import { useState } from 'react'
 import BookList from './components/BookList'
 import Book from './components/Book';
 import './App.css'
+import './custom-style.css'
 
 function App() {
 	const [selectedBook, setSelectedBook] = useState(null);
@@ -10,9 +11,9 @@ function App() {
 	<>
 	{
 		selectedBook ? (
-			<Book book={selectedBook}></Book>
+			<Book book={selectedBook} setSelectedBook={setSelectedBook} isSelected={true}></Book>
 		) : (
-			<BookList></BookList>
+			<BookList setSelectedBook={setSelectedBook}></BookList>
 		)
 	}
 	</>
