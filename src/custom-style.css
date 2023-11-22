@@ -5,6 +5,7 @@
 
 #root {
 	padding-top: 0px;
+	width: 100%;
 }
 
 nav {
@@ -15,6 +16,7 @@ nav {
 	flex-direction: row;
 	justify-content: center;
 	align-items: center;
+	gap: 3rem;
 
 	background: black;
 	border: 2px solid white;
@@ -32,4 +34,11 @@ nav {
 
 .small-text {
 	font-size: 0.75rem;
+}
+
+.bad {
+	color: orange;
+}
+.good {
+	color: greenyellow;
 }

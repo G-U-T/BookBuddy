@@ -7,7 +7,7 @@ const Book = ({book, setSelectedBook, isSelected}) => {
 				<section className="book vertical-flex">
 					
 					{/* The link goes to the book route if it's not selected, otherwise it goes back to the book list. */}
-					<Link to={isSelected ? (`/`) : (`/books/${book.id}`)}>
+					<Link to={isSelected ? (`/books`) : (`/books/${book.id}`)}>
 						<button onClick={() => {
 							if (isSelected) {
 								setSelectedBook(null);
