@@ -24,10 +24,10 @@ function App() {
 				<></>
 			} />
 			<Route path='/books' element={
-				<BookList setSelectedBook={setSelectedBook}></BookList>
+				<BookList setSelectedBook={setSelectedBook} token={token}></BookList>
 			} />
 			<Route path='/books/:id' element={
-				<Book book={selectedBook} setSelectedBook={setSelectedBook} isSelected={true}></Book>
+				<Book book={selectedBook} setSelectedBook={setSelectedBook} token={token} isSelected={true}></Book>
 			} />
 			<Route path='/login' element={
 				<Login setToken={setToken}></Login>

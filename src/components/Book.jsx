@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from 'react-router-dom';
 
-const Book = ({book, setSelectedBook, isSelected}) => {
+const Book = ({book, setSelectedBook, isSelected, token}) => {
 	return (
 			book ? (
 				<section className="book vertical-flex">
@@ -26,6 +26,7 @@ const Book = ({book, setSelectedBook, isSelected}) => {
 						isSelected ? (<>
 							<p>Author: {book.author}</p>
 							<p className="small-text">Description: {book.description}</p>
+							{token && <button>Check out</button>}
 						</>) : (
 							<></>
 						)
