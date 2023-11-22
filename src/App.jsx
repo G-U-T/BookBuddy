@@ -1,4 +1,6 @@
 import { useState } from 'react'
+import { Routes, Route } from 'react-router-dom'
+import NavBar from './components/NavBar';
 import BookList from './components/BookList'
 import Book from './components/Book';
 import './App.css'
@@ -9,13 +11,15 @@ function App() {
 
 	return (
 	<>
-	{
-		selectedBook ? (
-			<Book book={selectedBook} setSelectedBook={setSelectedBook} isSelected={true}></Book>
-		) : (
-			<BookList setSelectedBook={setSelectedBook}></BookList>
-		)
-	}
+		<NavBar></NavBar>
+		<Routes>
+			<Route path='/' element={
+				<BookList setSelectedBook={setSelectedBook}></BookList>
+			} />
+			<Route path='/books/:id' element={
+				<Book book={selectedBook} setSelectedBook={setSelectedBook} isSelected={true}></Book>
+			} />
+		</Routes>
 	</>
 	)
 }
